@@ -15,6 +15,9 @@ view =
 <Text>Hi</Text>
 />);
 
+//back stack
+var backStack = ["Main"];
+
 //Tree Children Update
 tree.forEach(setChild);
 function setChild(value, key, map) {
@@ -58,8 +61,27 @@ class Screen extends React.Component {
   }
 
   //Switch to another Screen
-  toScreen(to)
+  static toScreen(to)
   {
     onScreen = to;
+    backStack.push(to);
+  }
+
+  //Returns to the previous Screen
+  static back()
+  {
+    onScreen = backStack.pop();
+  }
+
+  //Returns to the superCategory of the current Screen
+  up()
+  {
+    Screen.toScreen(this.parent);
+  }
+
+  //Returns a list of the current Screen's subCategories
+  down()
+  {
+    return this.children;
   }
 }
