@@ -1,0 +1,34 @@
+//background size can be adjusted. colors are white and catalina blue 
+background: linear-gradient(181deg, #0a3874, #ffffff);
+background-size: 400% 400%;
+
+//webkit
+-webkit-animation: SDAAppBackground 30s ease infinite;
+
+//gecko 
+-moz-animation: SDAAppBackground 30s ease infinite;
+
+//opera
+-o-animation: SDAAppBackground 30s ease infinite;
+animation: SDAAppBackground 30s ease infinite;
+
+@-webkit-keyframes SDAAppBackground {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+@-moz-keyframes SDAAppBackground {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+@-o-keyframes SDAAppBackground {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
+@keyframes SDAAppBackground {
+    0%{background-position:0% 63%}
+    50%{background-position:100% 38%}
+    100%{background-position:0% 63%}
+}
